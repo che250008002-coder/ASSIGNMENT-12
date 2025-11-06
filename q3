@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Car  {
+    private:
+    string brand;
+    float price;
+    public:
+    Car(string b, double p) : brand(b), price(p) {}
+    void display() const{
+        cout << " Brand : " << brand << ",Price" << price << endl;
+    }
+    };
+
+int main(){
+Car car1("TOYOTA", 1.5);
+Car car2("KOEINESEGG", 150);
+
+
+cout << "Car 1 details:\n";
+car1.display();
+cout << "Car 2 details:\n";
+car2.display();
+
+    
+    
+    return 0;
+    
+}
