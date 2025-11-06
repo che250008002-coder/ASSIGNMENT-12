@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+private:
+    double length;
+    double breadth;
+
+public:
+    Rectangle() : length(1.0), breadth(1.0) {}
+    Rectangle(double l, double b) : length(l), breadth(b) {}
+    double area() const {
+        return length * breadth;
+    }
+    void displayArea() const {
+        cout << "Area: " << area() << endl;
+    }
+};
+
+int main() {
+
+    Rectangle r1;
+
+    double l, b;
+    cout << "Enter length and breadth for second rectangle: ";
+    cin >> l >> b; 
+    Rectangle r2(l, b);
+
+    cout << "Rectangle r1 (default values): ";
+    r1.displayArea();
+
+    cout << "Rectangle r2 (user values): ";
+    r2.displayArea();
+
+    return 0;
+}
