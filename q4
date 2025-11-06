@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class Box {
+    private:
+    float length , breadth , height;
+    public:
+    Box() : length(1),breadth(1),height(1){}
+    Box(float l ) : length(l), breadth(1), height(1){}
+    Box(float l, float b, float h) : length(l), breadth(b),height(h){}
+    float volume()const{
+    return length*breadth*height;
+    }
+    void displayvolume() const{
+        cout << " volume is " << volume() << endl;
+    }
+};
+int main(){
+Box box1;
+Box box2(2);
+Box box3(1,2,3);
+ cout << " box 1 ";
+ box1.displayvolume();
+ cout << " box 2 ";
+ box2.displayvolume();
+ cout << " box 3 ";
+ box3.displayvolume();
+ return 0;
+ }
